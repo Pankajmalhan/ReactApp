@@ -15,19 +15,11 @@ class Main extends React.Component {
           return (
           <div>
            <Header></Header>
-       
+       <div className="container">
       <Route exact path='/' component={Home}/>
-
-      <Route path='/details' render={(props) => (
-        <Details  data={this.age}/>
-        )}/>
-     
-        <Route path='/aboutus/:id' children={(props) => (
-          props.match
-            ? <AboutUs data={props.match} />
-            : <Details  data={this.age}/>
-        )}/>   
-      
+      <Route exact path='/details' component={Details}/>
+      <Route exact path='/aboutus' component={AboutUs}/>
+      </div>
       </div>
       );
    }

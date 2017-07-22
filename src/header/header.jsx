@@ -12,11 +12,21 @@ class Header extends React.Component {
     
       return (
         <div>
-        <ul>
-        <li><Link to='/' >Home</Link></li>
-        <li><Link to='/details' >Details</Link></li>
-        <li><Link to='/aboutus/120'>AboutUs</Link></li>   
-        </ul>
+          <nav className="navbar navbar-default">
+  <div className="container-fluid">
+    <div className="navbar-header">
+      <Link className="navbar-brand"  to='/' >Home</Link>
+    </div>
+    <ul className="nav navbar-nav">
+      <li className="active"><Link to='/' >Home</Link></li>
+      <li><Link to='/details' >Details</Link></li>
+      <li><Link to='/aboutus'>AboutUs</Link></li>
+     
+    </ul>
+  </div>
+</nav>
+  
+        
          </div>
       );
    }
